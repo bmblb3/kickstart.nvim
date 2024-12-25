@@ -10,5 +10,6 @@
   "stylua": "v2.0.2",
   "tinymist": "v0.12.12",
   "typst-lsp": "v0.13.0",
-  "typstfmt": "0.2.10"
+  "typstfmt": "0.2.10",
+  "yamlfmt": "v0.14.0"
 }
