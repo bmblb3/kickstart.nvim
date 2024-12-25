@@ -99,4 +99,13 @@ return {
       vim.keymap.set('n', '<leader>tv', ':TestVisit<CR>', { desc = '[T]est [V]isit' })
     end,
   },
+  --
+  {
+    'zapling/mason-lock.nvim',
+    init = function()
+      require('mason-lock').setup {
+        lockfile_path = vim.fn.stdpath 'config' .. '/mason-lock.json', -- (default)
+      }
+    end,
+  },
 }
