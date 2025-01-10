@@ -635,14 +635,19 @@ require('lazy').setup({
             pylsp = {
               configurationSources = { 'flake8' },
               plugins = {
+                autopep8 = { enabled = false },
                 pycodestyle = { enabled = false },
                 mccabe = { enabled = false },
                 pyflakes = { enabled = false },
-                flake8 = { enabled = true },
+                flake8 = { enabled = false },
+                preload = { enabled = false },
+                yapf = { enabled = false },
               },
             },
           },
         },
+
+        ruff = {},
 
         lua_ls = {
           -- cmd = { ... },
@@ -673,6 +678,13 @@ require('lazy').setup({
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
+        'black',
+        'isort',
+        'prettier',
+        'typstfmt',
+        'shellharden',
+        'yamlfmt',
+        'prettierd',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
