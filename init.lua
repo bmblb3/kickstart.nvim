@@ -694,6 +694,7 @@ require('lazy').setup({
         'prettier',
         'typstfmt',
         'shellharden',
+        'shellcheck',
         'yamlfmt',
         'prettierd',
       })
